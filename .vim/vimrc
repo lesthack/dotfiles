@@ -1,0 +1,36 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set number
+set syntax=on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set nowrap
+set mouse=a
+set splitright
+set autoindent smartindent
+
+if has("gui_running")
+    color badwolf
+    set background=dark
+    set guifont=Monospace\ 9
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=r
+    set guioptions-=L
+else
+    color slate
+endif
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType html set ft=htmldjango.html
+
+" map control-backspace to delete the previous word
+imap <C-BS> <C-W>
+vnoremap <C-c> "*y
+
