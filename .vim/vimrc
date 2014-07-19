@@ -11,15 +11,22 @@ set nowrap
 set mouse=a
 set splitright
 set autoindent smartindent
+set foldmethod=indent
 
 if has("gui_running")
     color badwolf
     set background=dark
     set guifont=Monospace\ 9
+    " Remove Toolbar
     set guioptions-=T
+    " Remove menu bar
     set guioptions-=m
+    " Remove right scrollbar
     set guioptions-=r
+    " Remove left scrollbar
     set guioptions-=L
+    " Copy to clipboard selection
+    vnoremap <C-c> "*y
 else
     color slate
 endif
@@ -30,7 +37,9 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set ft=htmldjango.html
 
-" map control-backspace to delete the previous word
+" Ctrl+Backsapce delete before word
 imap <C-BS> <C-W>
-vnoremap <C-c> "*y
-
+" Ctrl+l delete current line
+imap <C-L> c<ESC>ddi
+" Ctrl+d delete after word
+imap <C-D> c<ESC>dwi
