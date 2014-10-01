@@ -12,6 +12,7 @@ set mouse=a
 set splitright
 set autoindent smartindent
 set foldmethod=indent
+set clipboard=unnamedplus
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
@@ -32,8 +33,6 @@ if has("gui_running")
     set guioptions-=r
     " Remove left scrollbar
     set guioptions-=L
-    " Copy to clipboard selection
-    vnoremap <C-c> "*y
 else
     color slate
 endif
@@ -58,6 +57,12 @@ imap <C-L> c<ESC>ddi
 imap <C-D> c<ESC>dwi
 " NerdTree
 map <C-a> :NERDTreeToggle<CR>
+
+" Copy to clipboard selection (require set clipboard=unnamedplus)
+vnoremap <C-c> y
+" Paste from clipboard (require sete clipboard=unnamedplus)
+imap <C-p> <ESC>"+pkdd
+
 " Easymontion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map  / <Plug>(easymotion-sn)
