@@ -15,7 +15,7 @@ set foldmethod=indent
 set clipboard=unnamedplus
 
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_at_startup = 1
 
 " Airline
 let g:airline_powerline_fonts=1
@@ -61,7 +61,7 @@ map <C-a> :NERDTreeToggle<CR>
 " Copy to clipboard selection (require set clipboard=unnamedplus)
 vnoremap <C-c> y
 " Paste from clipboard (require sete clipboard=unnamedplus)
-imap <C-p> <ESC>"+pkdd
+" imap <C-p> <ESC>"+pkdd
 
 " Easymontion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
