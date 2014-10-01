@@ -13,6 +13,13 @@ set splitright
 set autoindent smartindent
 set foldmethod=indent
 
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+
+" Airline
+let g:airline_powerline_fonts=1
+set laststatus=2
+
 if has("gui_running")
     color badwolf
     set background=dark
@@ -37,9 +44,23 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set ft=htmldjango.html
 
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 " Ctrl+Backsapce delete before word
 imap <C-BS> <C-W>
 " Ctrl+l delete current line
 imap <C-L> c<ESC>ddi
 " Ctrl+d delete after word
 imap <C-D> c<ESC>dwi
+" NerdTree
+map <C-a> :NERDTreeToggle<CR>
+" Easymontion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
