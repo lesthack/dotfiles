@@ -10,6 +10,7 @@ set expandtab
 set nowrap
 set mouse=a
 set splitright
+set splitbelow
 set autoindent smartindent
 set foldmethod=indent
 set clipboard=unnamedplus
