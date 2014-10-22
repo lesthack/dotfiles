@@ -19,3 +19,4 @@ Lista de Plugins:
 10. [Fugitive](https://github.com/tpope/vim-fugitive)
 11. [Gitgutter](https://github.com/airblade/vim-gitgutter)
 12. [VIM Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
+13. [Vim Indent guides](https://github.com/nathanaelkane/vim-indent-guides)
