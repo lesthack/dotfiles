@@ -18,5 +18,18 @@ Lista de Plugins:
 9. [Easymotion](https://github.com/Lokaltog/vim-easymotion)
 10. [Fugitive](https://github.com/tpope/vim-fugitive)
 11. [Gitgutter](https://github.com/airblade/vim-gitgutter)
-12. [VIM Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
+12. [Vim Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
 13. [Vim Indent guides](https://github.com/nathanaelkane/vim-indent-guides)
+14. [Vim Wakatime]()
+
+## Clonado
+```bash
+$ git clone https://github.com/lesthack/dotfiles.git ~/.dotfiles
+```
+
+## Usar configuraciones de VIM
+La manera mas sencilla es usar enlaces simbólicos, apuntando a nuestro archivo .vimrc y el directorio .vim
+```bash
+$ ln -s ~/.dotfiles/.vim .vim
+$ ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
+```
