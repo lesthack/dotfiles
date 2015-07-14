@@ -34,6 +34,8 @@ if has("gui_running")
     set guioptions-=r
     " Remove left scrollbar
     set guioptions-=L
+    " Desactiva el clipboard dado a MacVim
+    set clipboard=unnamed
 else
     color slate
 endif
