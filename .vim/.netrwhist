@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/lesthack/unisem/problemas/reparaciones'
-let g:netrw_dirhist_2='/home/jhernandez/www/SeedAdmon/seedadmon/templates'
-let g:netrw_dirhist_3='/opt/git/PushBullet_Mirror/chrome-extension'
-let g:netrw_dirhist_4='/home/jhernandez/www/crm-1.6.5/maices'
-let g:netrw_dirhist_5='/home/jhernandez/.vim/bundle'
