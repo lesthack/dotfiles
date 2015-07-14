@@ -58,6 +58,7 @@ imap <C-L> c<ESC>ddi
 imap <C-D> c<ESC>dwi
 " NerdTree
 map <C-a> :NERDTreeToggle<CR>
+map <C-k> :cd %:p:h<CR>
 
 " Copy to clipboard selection (require set clipboard=unnamedplus)
 vnoremap <C-c> y
