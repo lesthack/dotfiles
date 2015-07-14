@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
