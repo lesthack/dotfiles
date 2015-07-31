@@ -25,6 +25,8 @@ Lista de Plugins:
 ## Clonado
 ```bash
 $ git clone https://github.com/lesthack/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
+$ git submodule update --init --recursive
 ```
 
 ## Usar configuraciones de VIM
