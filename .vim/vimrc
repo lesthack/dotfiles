@@ -58,7 +58,14 @@ imap <C-L> c<ESC>ddi
 imap <C-D> c<ESC>dwi
 " NerdTree
 map <C-a> :NERDTreeToggle<CR>
+" Change directory path to current file
 map <C-k> :cd %:p:h<CR>
+" Indent 4
+map <C-S-F4> :set expandtab ts=4 sw=4 ai<CR>
+imap <C-S-F4> <ESC>:set expandtab ts=4 sw=4 ai<CR>a
+" Indent 2
+map <C-S-F2> :set expandtab ts=2 sw=2 ai<CR>
+imap <C-S-F2> <ESC>:set expandtab ts=2 sw=2 ai<CR>a
 
 " Copy to clipboard selection (require set clipboard=unnamedplus)
 vnoremap <C-c> y
