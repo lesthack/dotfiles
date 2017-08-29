@@ -20,7 +20,9 @@ Lista de Plugins:
 11. [Gitgutter](https://github.com/airblade/vim-gitgutter)
 12. [Vim Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
 13. [Vim Indent guides](https://github.com/nathanaelkane/vim-indent-guides)
-14. [Vim Wakatime]()
+14. [Vim Wakatime](https://github.com/wakatime/vim-wakatime)
+15. [Vim kotlin](https://github.com/udalov/kotlin-vim)
+16. [Vim Vala](https://github.com/arrufat/vala.vim)
 
 ## Clonado
 ```bash
