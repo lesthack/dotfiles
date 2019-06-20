@@ -67,3 +67,12 @@
 [submodule ".vim/bundle/vala.vim"]
 	path = .vim/bundle/vala.vim
 	url = https://github.com/arrufat/vala.vim
+[submodule ".vim/bundle/dart-vim-plugin"]
+	path = .vim/bundle/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin
+[submodule ".vim/bundle/vim-flutter"]
+	path = .vim/bundle/vim-flutter
+	url = https://github.com/thosakwe/vim-flutter
+[submodule ".vim/bundle/typescript-vim"]
+	path = .vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
