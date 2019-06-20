@@ -4,8 +4,8 @@ filetype plugin indent on
 
 set number
 set syntax=on
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set nowrap
 set mouse=a
@@ -50,6 +50,10 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+if strpart(expand('%:p:h'), 0, 20) == '/run/user/1000/gvfs/'
+    set noswapfile
+endif
+
 " Ctrl+Backsapce delete before word
 imap <C-BS> <C-W>
 " Ctrl+l delete current line
@@ -66,6 +70,8 @@ imap <C-S-F4> <ESC>:set expandtab ts=4 sw=4 ai<CR>a
 " Indent 2
 map <C-S-F2> :set expandtab ts=2 sw=2 ai<CR>
 imap <C-S-F2> <ESC>:set expandtab ts=2 sw=2 ai<CR>a
+" Exec Python
+map <C-S-b> :!python %<CR>
 
 " Copy to clipboard selection (require set clipboard=unnamedplus)
 vnoremap <C-c> y
@@ -79,3 +85,7 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
+" ftp-poseidon
+if strpart(expand('%:p:h'), 0, 20) == '/run/user/1000/gvfs/'
+  set noswapfile
+endif
