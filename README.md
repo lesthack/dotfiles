@@ -23,6 +23,9 @@ Lista de Plugins:
 14. [Vim Wakatime](https://github.com/wakatime/vim-wakatime)
 15. [Vim kotlin](https://github.com/udalov/kotlin-vim)
 16. [Vim Vala](https://github.com/arrufat/vala.vim)
+17. [Vim Typescript](https://github.com/leafgarland/typescript-vim)
+18. [Vim Dart](https://github.com/dart-lang/dart-vim-plugin)
+19. [Vim Flutter](https://github.com/thosakwe/vim-flutter)
 
 ## Clonado
 ```bash
@@ -36,4 +39,10 @@ La manera mas sencilla es usar enlaces simbólicos, apuntando a nuestro archivo 
 ```bash
 $ ln -s ~/.dotfiles/.vim .vim
 $ ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
+```
+
+## Actualizar submodulos
+Para actualizar todos los submodulos de forma fácil, ejecuta:
+```bash
+$ git pull --recurse-submodules
 ```
