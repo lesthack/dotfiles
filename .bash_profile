@@ -6,16 +6,19 @@ export EDITOR="$VISUAL"
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# OpenSSL
-# Siempre y cuando tenga la version 1.1.1
-# export LD_LIBRARY_PATH=/usr/local/lib
-
 # Android SDK
 export ANDROID_HOME=/home/lesthack/.android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
 
 # Google Flutter
 export PATH=$PATH:$HOME/.android/flutter/bin/
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+function load_nvm() {
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
 
 # Mis Utils
 export PATH=$PATH:$HOME/code/Utils/
@@ -50,7 +53,4 @@ alias ls="ls -l"
 alias diskusage="df -h"
 alias folderusage="du -ch"
 alias totalfolderusage="du -sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias totalusage="ncdu"
