@@ -2,12 +2,15 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Dotfiles
+export PATH_DOTFILES=$HOME/.dotfiles/
+
 # Virtualenvwrappers
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Android SDK
-export ANDROID_HOME=/home/lesthack/.android/sdk
+export ANDROID_HOME=$HOME/.android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
 
 # Google Flutter
@@ -20,20 +23,16 @@ function load_nvm() {
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 }
 
-# Mis Utils
-export PATH=$PATH:$HOME/code/Utils/
-
 # Go
-# export GOPATH=$HOME/.go
-# export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export GOPATH=$HOME/.go
+if [ -d /usr/local/go/bin ]; then
+  export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+fi
 
 # mssql tools
-# export PATH="$PATH:/opt/mssql-tools/bin"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#export SDKMAN_DIR="/home/lesthack/.sdkman"
-#[[ -s "/home/lesthack/.sdkman/bin/sdkman-init.sh" ]] && source "/home/lesthack/.sdkman/bin/sdkman-init.sh"
-#export GPG_TTY=$(tty)
+if [ -d /opt/mssql-tools/bin ]; then
+  export PATH="$PATH:/opt/mssql-tools/bin"
+fi
 
 # Alias
 alias python_server="python -m SimpleHTTPServer 8000"
@@ -45,8 +44,6 @@ alias miwebcam2="mplayer -ontop -noborder -geometry 240x240+1600+840 -tv driver=
 alias checkspace="df -h .; du -h --max-depth=1 | sort -hr"
 alias mobile_show="snap run scrcpy"
 alias change_wallpaper="~/code/others/autowallpaper_unsplash.sh"
-alias ssh_maices="ssh jhernandez@maices.com -p 2222"
-alias ssh_BugMaster="ssh lesthack@192.168.16.100"
 alias tmux="tmux -u"
 alias adb_wifi="adb kill-server & adb tcpip 5555 & adb shell ifconfig & echo 'Use: adb connect ip:5555'"
 alias ls="ls -l"
@@ -54,3 +51,24 @@ alias diskusage="df -h"
 alias folderusage="du -ch"
 alias totalfolderusage="du -sh"
 alias totalusage="ncdu"
+
+# Sensible
+KEY="086F0C06"
+if [ ! -f  /usr/bin/gpg ]; then
+  echo '(sensible) Please, install gpg \nsudo apt-get install gpg'
+else
+  export SENSIBLE_FILE=$PATH_DOTFILES/.bash_sensible
+  if [ -f $SENSIBLE_FILE ]; then
+    source $SENSIBLE_FILE
+  else
+    if [ -f $SENSIBLE_FILE.gpg ]; then
+      if [[ $( gpg --list-keys | grep $KEY ) ]]; then
+        gpg --decrypt-files $SENSIBLE_FILE.gpg
+      else
+        echo "(sensible) You need import the gpg key: $KEY"
+      fi
+    else
+      echo "(sensible) $SENSIBLE_FILE.gpg not found"
+    fi
+  fi
+fi

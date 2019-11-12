@@ -1,0 +1,5 @@
+# swp
+*.swp
+
+# sensible
+.bash_sensible
