@@ -25,7 +25,7 @@ function load_nvm() {
 
 # Go
 export GOPATH=$HOME/.go
-if [ -d /usr/local/go/bin ]; then
+if [ -f /usr/bin/go ]; then
   export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
 
@@ -36,6 +36,8 @@ fi
 
 # Alias
 alias tmux="tmux -u"
+alias ls="ls -l"
+alias ifconfig='ip -c a'
 alias me_adb_wifi="adb kill-server & adb tcpip 5555 & adb shell ifconfig & echo 'Use: adb connect ip:5555'"
 alias me_python_server="python -m SimpleHTTPServer 8000"
 alias me_mix_activate="pactl load-module module-null-sink sink_name=duplex_out;pactl load-module module-null-sink sink_name=game_out;pactl load-module module-loopback source=game_out.monitor;pactl load-module module-loopback source=game_out.monitor sink=duplex_out;"
@@ -44,7 +46,6 @@ alias me_miwebcam="mplayer -ontop -noborder -geometry 320x240+1600+840 -tv drive
 alias me_miwebcam2="mplayer -ontop -noborder -geometry 240x240+1600+840 -tv driver=v4l2:width=240:height=240:device=/dev/video0 tv://"
 alias me_mobile_show="snap run scrcpy"
 alias me_change_wallpaper="~/code/others/autowallpaper_unsplash.sh"
-alias ls="ls -l"
 alias me_diskusage="df -h"
 alias me_folderusage="du -ch"
 alias me_totalfolderusage="du -sh"
