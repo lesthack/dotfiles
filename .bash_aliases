@@ -14,7 +14,7 @@ alias me_folderusage="du -ch"
 alias me_totalfolderusage="du -sh"
 alias me_totalusage="ncdu"
 alias me_checkspace="df -h .; du -h --max-depth=1 | sort -hr"
-alias me_bajarmp3="youtube-dl --extract-audio --audio-format mp3"
+alias me_bajarmp3="youtube-dl -x --add-metadata --embed-thumbnail --audio-format mp3"
 alias me_restart_bluetooth="sudo service bluetooth restart && killall wingpanel"
 alias me_colorscheme='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 alias me_v412loopback="sudo modprobe v4l2loopback exclusive_caps=1"
