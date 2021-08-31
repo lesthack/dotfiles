@@ -8,7 +8,10 @@ export ALIASES=$PATH_DOTFILES/.bash_aliases
 
 # Virtualenvwrappers
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
 
 # Android SDK
 export ANDROID_HOME=$HOME/.android/sdk
@@ -26,13 +29,25 @@ function load_nvm() {
 
 # Go
 export GOPATH=$HOME/.go
-if [ -f /usr/bin/go ]; then
+if [ -f /usr/local/go/bin/go ]; then
   export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
+
+# gnvim
+if [ -f /opt/gnvim/runtime ]; then
+  export GNVIM_RUNTIME_PATH=/opt/gnvim/runtime cargo run
+fi
+
+# Rust
+source "$HOME/.cargo/env"
 
 # mssql tools
 if [ -d /opt/mssql-tools/bin ]; then
   export PATH="$PATH:/opt/mssql-tools/bin"
+fi
+# Microsoft MSSQL
+if [ -d /opt/mssql-tools/bin/ ]; then
+  export PATH=$PATH:/opt/mssql-tools/bin/
 fi
 
 # Alias
