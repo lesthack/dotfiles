@@ -28,20 +28,36 @@ Lista de Plugins:
 19. [Vim Flutter](https://github.com/thosakwe/vim-flutter)
 
 ## Clonado
+
 ```bash
 $ git clone https://github.com/lesthack/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ git submodule update --init --recursive
 ```
 
-## Usar configuraciones de VIM
+## Configuraciones de VIM
+
 La manera mas sencilla es usar enlaces simbólicos, apuntando a nuestro archivo .vimrc y el directorio .vim
 ```bash
 $ ln -s ~/.dotfiles/.vim .vim
 $ ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
 ```
 
+## Configuraciones de Git
+
+Algunos alias necesitan un par de herramientas que se pueden instalar de la siguiente manera:
+```bash
+$ sudo apt-get install peco tig
+$ sudo pip3 install -U Commitizen
+```
+
+Finalmente, enlazamos la configuración:
+```bash
+$ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+```
+
 ## Actualizar submodulos
+
 Para actualizar todos los submodulos de forma fácil, ejecuta:
 ```bash
 $ git pull --recurse-submodules
