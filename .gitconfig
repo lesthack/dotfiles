@@ -1,7 +1,7 @@
 [core]
   editor = vim
 [user]
-	name = Jorge Hernández
+  name = Jorge Hernández
   email = j.hernandez@maices.com
 [alias]
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
