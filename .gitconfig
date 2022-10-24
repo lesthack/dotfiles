@@ -1,7 +1,7 @@
 [core]
   editor = vim
 [user]
-	name = Jorge Hernández
+  name = Jorge Hernández
   email = j.hernandez@maices.com
 [alias]
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
@@ -28,3 +28,5 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  # me
+  cn = "!git commit -m `date +%Y-%m-%d`"
