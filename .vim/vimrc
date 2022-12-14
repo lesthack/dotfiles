@@ -25,7 +25,7 @@ set laststatus=2
 if has("gui_running")
     color badwolf
     set background=dark
-    set guifont=Monospace\ 9
+    set guifont=Monospace\ 12
     " Remove Toolbar
     set guioptions-=T
     " Remove menu bar
@@ -34,6 +34,22 @@ if has("gui_running")
     set guioptions-=r
     " Remove left scrollbar
     set guioptions-=L
+    " font size functions
+    function! FontSizePlus ()
+      let l:gf_size_whole = matchstr(&guifont, '\( \)\@<=\d\+$')
+      let l:gf_size_whole = l:gf_size_whole + 1
+      let l:new_font_size = ' '.l:gf_size_whole
+      let &guifont = substitute(&guifont, ' \d\+$', l:new_font_size, '')
+    endfunction
+    function! FontSizeMinus ()
+      let l:gf_size_whole = matchstr(&guifont, '\( \)\@<=\d\+$')
+      let l:gf_size_whole = l:gf_size_whole - 1
+      let l:new_font_size = ' '.l:gf_size_whole
+      let &guifont = substitute(&guifont, ' \d\+$', l:new_font_size, '')
+    endfunction
+    nmap <C-S-F12> :call FontSizePlus()<CR>
+    nmap <C-S-F11> :call FontSizeMinus()<CR>
+    nmap <C-S-F10> :set guifont=Monospace\ 12<CR>
 else
     color slate
 endif
