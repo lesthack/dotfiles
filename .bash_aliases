@@ -2,7 +2,7 @@ alias tmux="tmux -u"
 alias ls="ls -l"
 alias ifconfig='ip -c a'
 alias me_adb_wifi="adb kill-server & adb tcpip 5555 & adb shell ifconfig & echo 'Use: adb connect ip:5555'"
-alias me_python_server="python -m SimpleHTTPServer 8000"
+alias me_python_server="python3 -m http.server 9000"
 alias me_mix_activate="pactl load-module module-null-sink sink_name=duplex_out;pactl load-module module-null-sink sink_name=game_out;pactl load-module module-loopback source=game_out.monitor;pactl load-module module-loopback source=game_out.monitor sink=duplex_out;"
 alias me_mix_deactivate="pactl unload-module module-null-sink;pactl unload-module module-loopback"
 alias me_miwebcam="mplayer -ontop -noborder -geometry 320x240+1600+840 -tv driver=v4l2:width=320:height=240:device=/dev/video0 tv://"
