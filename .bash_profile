@@ -11,7 +11,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 #export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-source ~/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Android SDK
 export ANDROID_HOME=$HOME/.android/sdk
@@ -39,7 +39,7 @@ if [ -f /opt/gnvim/runtime ]; then
 fi
 
 # Rust
-source "$HOME/.cargo/env"
+#source "$HOME/.cargo/env"
 
 # mssql tools
 if [ -d /opt/mssql-tools/bin ]; then
