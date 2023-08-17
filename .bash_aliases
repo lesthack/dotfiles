@@ -21,3 +21,6 @@ alias me_colorscheme='bash -c  "$(wget -qO- https://git.io/vQgMr)"'
 alias me_v412loopback="sudo modprobe v4l2loopback exclusive_caps=1"
 alias me_headers_update="sudo apt-get install linux-headers-`uname -r`"
 alias me_vagrant_reinstall_dkms="sudo apt-get install --reinstall virtualbox-dkms && sudo /sbin/vboxconfig"
+alias me_apt_update="sudo apt-get update && sudo apt-get upgrade -y"
+alias me_flatpack_update="flatpak update -y"
+alias me_update_all="me_apt_update && me_flatpack_update"
