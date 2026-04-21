@@ -14,8 +14,11 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Android SDK
-export ANDROID_HOME=$HOME/.android/sdk
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export ANDROID_HOME=$HOME/.android/Sdk
+export ANDROID_SDK_ROOT=$HOME/.android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
 
 # Google Flutter
 export PATH=$PATH:$HOME/.android/flutter/bin/
@@ -49,6 +52,12 @@ fi
 if [ -d /opt/mssql-tools/bin/ ]; then
   export PATH=$PATH:/opt/mssql-tools/bin/
 fi
+# MSSQL 18
+if [ -d /opt/mssql-tools18/bin ]; then
+  export PATH="$PATH:/opt/mssql-tools18/bin"
+fi
+# Dotnet
+export PATH="$HOME/.dotnet:$PATH"
 
 # Alias
 source $ALIASES
